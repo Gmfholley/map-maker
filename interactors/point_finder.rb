@@ -22,10 +22,10 @@ class PointFinder
   def point
     return @point if defined?(@point)
 
-    @point = path.find_point(*coord_in_direction)
+    @point = path.find_point(*point_in_direction)
   end
 
-  def coord_in_direction
+  def point_in_direction
     x = current.x + direction.x
     y = current.y + direction.y
     [x, y]
@@ -36,14 +36,14 @@ class PointFinder
   end
 
   def already_using?
-    coordinates.include?(point)
+    points.include?(point)
   end
 
   def current
     path.current
   end
 
-  def coordinates
+  def points
     path.coordinates
   end
 end

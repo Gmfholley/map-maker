@@ -23,8 +23,8 @@ class Map
   end
 
   def to_s
-    coordinates.group_by(&:x).map do |x, coords|
-      (min_y..max_y).map do |y|
+    coordinates.group_by(&:y).map do |y, coords|
+      (min_x..max_x).map do |x|
         coord = find_point(x, y) || " "
         coord.to_s
       end.join("  ")

@@ -12,12 +12,12 @@ class Direction
     @@directions ||=
     [
       Direction.new(:northwest, -1, -1, '⬉'),
-      Direction.new(:north, -1, 0, '↑'),
-      Direction.new(:northeast, -1, 1, '⬈'),
-      Direction.new(:west, 0, -1, '←'),
-      Direction.new(:east, 0, 1, '→'),
-      Direction.new(:southwest, 1, -1, '⬋'),
-      Direction.new(:south, 1, 0, '↓'),
+      Direction.new(:north, 0, -1, '↑'),
+      Direction.new(:northeast, 1, -1, '⬈'),
+      Direction.new(:west, -1, 0, '←'),
+      Direction.new(:east, 1, 0, '→'),
+      Direction.new(:southwest, -1, 1, '⬋'),
+      Direction.new(:south, 0, 1, '↓'),
       Direction.new(:southeast, 1, 1, '⬊'),
     ]
   end
